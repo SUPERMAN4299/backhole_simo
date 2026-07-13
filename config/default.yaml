@@ -1,0 +1,32 @@
+# ==========================================================================
+#  bhsim — default configuration
+# ==========================================================================
+# All values here serve as the baseline.  Override per-run by passing a
+# second YAML file (or CLI flags, once implemented).
+
+window:
+  width: 1280
+  height: 720
+  vsync: true
+  title: "bhsim — Black Hole Visualization Engine"
+  fullscreen: false
+
+black_hole:
+  mass: 10.0          # solar masses
+  spin: 0.0           # dimensionless spin parameter a* ∈ [0, 1)
+
+camera:
+  position: [0.0, 3.0, -15.0]   # world-space eye position
+  target:   [0.0, 0.0,   0.0]   # look-at point
+  fov: 60.0                      # vertical field of view (degrees)
+  near: 0.1
+  far: 1000.0
+
+rendering:
+  resolution_scale: 1.0    # multiplier on window resolution for ray-trace
+  max_steps: 300            # max integration steps per ray
+  step_size: 0.05           # initial RK4 step size (in M units)
+  bloom_enabled: true
+  bloom_threshold: 1.0
+  bloom_intensity: 0.35
+  tonemap_method: "aces"    # aces | reinhard | uncharted2

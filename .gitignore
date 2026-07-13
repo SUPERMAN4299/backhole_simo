@@ -1,0 +1,57 @@
+# ==========================================================================
+#  bhsim .gitignore
+# ==========================================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+*.so
+*.dylib
+.eggs/
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+
+# ---------- IDE / Editor ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ---------- Testing / Coverage ----------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- OpenGL / GPU ----------
+*.spv
+*.spirv
+
+# ---------- Logs / Debug ----------
+*.log
+debug_frames/
+
+# ---------- Data / large files ----------
+*.hdr
+*.exr
+*.fits
+data/
+!config/
